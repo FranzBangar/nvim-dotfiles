@@ -16,7 +16,6 @@ return {
         "bash",
         "html",
         "javascript",
-        "json",
         "lua",
         "markdown",
         "markdown_inline",
@@ -41,11 +40,8 @@ return {
       },
     },
   },
-
   {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "catppuccin",
-    },
-  },
+    "echasnovski/mini.pairs",
+    enabled = false,
+  }
 }
