@@ -1,4 +1,10 @@
-# 💤 LazyVim
+# 💤 LazyVim dotfiles
 
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+The always-not-finished personal settings.
+
+## Also
+
+Hint: remap Escape key to Context menu; tilt your hand and you're back to Normal!
+Also keeps the Caps lock key in service if one would want to yell over IRC.
+
+xmodmap -e "keycode 135 = Escape" >> ~/.bashrc

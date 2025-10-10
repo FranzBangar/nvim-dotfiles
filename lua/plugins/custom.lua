@@ -43,5 +43,12 @@ return {
   {
     "echasnovski/mini.pairs",
     enabled = false,
+  },
+  -- add gruvbox
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "catppuccin",
+    },
   }
 }
