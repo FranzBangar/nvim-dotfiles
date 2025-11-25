@@ -23,18 +23,20 @@ return {
 
       -- Optionally: setup auto-format on save
       setup = {
-        ruff = function(_, opts)
-          -- Force Ruff to also handle formatting if you want
-          -- Uncomment below if you want format on save via Ruff
-          require("lazyvim.util").lsp.on_attach(function(client, bufnr)
+        -- Enable Ruff as a formatter when it attaches
+        vim.api.nvim_create_autocmd("LspAttach", {
+          group = vim.api.nvim_create_augroup("UserLspAttach", { clear = false }),
+          callback = function(args)
+            local client = vim.lsp.get_client_by_id(args.data.client_id)
+            if not client then
+              return
+            end
             if client.name == "ruff_lsp" then
               client.server_capabilities.documentFormattingProvider = true
             end
-          end)
-          return false
-        end,
+          end,
+        }),
       },
     },
   },
 }
-
