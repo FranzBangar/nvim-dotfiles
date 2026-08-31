@@ -27,6 +27,8 @@ return {
         "vim",
         "yaml",
         "toml",
+        "cpp",
+        "foam",
       },
     },
   },
@@ -37,6 +39,7 @@ return {
     opts = {
       ensure_installed = {
         "ruff",
+        "clangd",
       },
     },
   },
